@@ -16,7 +16,7 @@ namespace friendlyfirebetterperms.Commands.FriendlyFire
 
         public override string[] Aliases { get; } = new string[] { "ff" };
 
-        public override string Description { get; } = "Enabled and Disabled Friendly Fire";
+        public override string Description { get; } = "Enable and Disable Friendly Fire";
 
         public override void LoadGeneratedCommands() { }
 
