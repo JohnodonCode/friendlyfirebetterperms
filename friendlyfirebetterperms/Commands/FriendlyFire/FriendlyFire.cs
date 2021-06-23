@@ -3,6 +3,7 @@ using Exiled.API.Features;
 using Exiled.API.Extensions;
 using RemoteAdmin;
 using System;
+using Exiled.Permissions.Extensions;
 
 namespace friendlyfirebetterperms.Commands.FriendlyFire
 {
@@ -21,9 +22,9 @@ namespace friendlyfirebetterperms.Commands.FriendlyFire
 
         protected override bool ExecuteParent(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            if (!sender.CheckPermission(PlayerPermissions.FacilityManagement))
+            if (!sender.CheckPermission("friendlyfirebetterperms.use"))
             {
-                response = "You do not have permission to use this command";
+                response = "You do not have permission to use this command. (friendlyfirebetterperms.use)";
                 return false;
             }
 
