@@ -10,12 +10,18 @@ namespace friendlyfirebetterperms
 {
     public class Plugin : Plugin<Config>
     {
+        public override string Author { get; } = "Johnodon";
+        public override string Name { get; } = "FriendlyFireBetterPerms";
+        public override string Prefix { get; } = "FFBP";
+        public override Version Version { get; } = new Version(1, 1, 0);
+        public override Version RequiredExiledVersion { get; } = new Version(2, 8, 0);
+
         public static Plugin Instance;
         private Handlers _handler;
 
         public override void OnEnabled()
         {
-            Log.Info("friendlyfirebetterperms.dll is now running.");
+            Log.Info("friendlyfirebetterperms.dll is enabled.");
 
             Instance = this;
 
