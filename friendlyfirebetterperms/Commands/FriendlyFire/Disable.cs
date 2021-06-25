@@ -22,7 +22,7 @@ namespace friendlyfirebetterperms.Commands.FriendlyFire
             }
             else
             {
-                ServerConsole.FriendlyFire = true;
+                ServerConsole.FriendlyFire = false;
                 response = "Disabled Friendly Fire";
                 Log.Info("FriendlyFire disabled.");
                 return true;
