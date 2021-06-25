@@ -31,9 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Commands\FriendlyFire\FriendlyFire.cs" />
+    <Compile Include="Commands\FriendlyFire\Enable.cs" />
+    <Compile Include="Commands\FriendlyFire\Disable.cs" />
+    <Compile Include="Commands\FriendlyFire\FriendlyFireParent.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Handlers.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

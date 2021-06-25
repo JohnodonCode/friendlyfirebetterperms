@@ -1,0 +1,32 @@
+﻿using System;
+using CommandSystem;
+using Exiled.API.Features;
+using Exiled.Permissions.Extensions;
+
+namespace friendlyfirebetterperms.Commands.FriendlyFire
+{
+    class Disable : ICommand
+    {
+        public string Command { get; } = "disable";
+
+        public string[] Aliases { get; } = { "off" };
+
+        public string Description { get; } = "Disables Friendly Fire";
+
+        public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
+        {
+            if (!sender.CheckPermission("friendlyfirebetterperms.use"))
+            {
+                response = "You do not have permission to use this command. (friendlyfirebetterperms.use)";
+                return false;
+            }
+            else
+            {
+                ServerConsole.FriendlyFire = true;
+                response = "Disabled Friendly Fire";
+                Log.Info("FriendlyFire disabled.");
+                return true;
+            }
+        }
+    }
+}
